@@ -1,5 +1,6 @@
 export interface UnsplashImage {
   description: string;
+  alt_description: string;
   user: {
     username: string;
   };

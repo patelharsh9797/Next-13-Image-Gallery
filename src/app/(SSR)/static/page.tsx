@@ -13,7 +13,6 @@ export default async function StaticPage() {
       process.env.UNSPLASH_ACCESS_KEY,
   );
   const image: UnsplashImage = await response.json();
-
   const width = Math.min(500, image.width);
   const height = (width / image.width) * image.height;
 
@@ -28,7 +27,7 @@ export default async function StaticPage() {
         src={image.urls.raw}
         width={width}
         height={height}
-        alt={image.description}
+        alt={image.alt_description}
         className="rounded shadow mw-100 h-100"
       />
       by{" "}
